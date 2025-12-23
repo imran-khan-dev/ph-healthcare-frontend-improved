@@ -37,6 +37,8 @@ export async function createSpeciality(_prevState: any, formData: FormData) {
     newFormData.append("data", JSON.stringify(validatedPayload.data))
     newFormData.append("file", formData.get("file") as Blob)
 
+    console.log("speicality", newFormData)
+
     try {
         const response = await serverFetch.post("/specialties", {
             body: newFormData,
