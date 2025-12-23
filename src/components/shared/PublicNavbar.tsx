@@ -59,7 +59,11 @@ const PublicNavbar = async () => {
         </div>
 
         <MobileMenu
-          navItems={[...navItems, ...dropdownItems]}
+          navItems={navItems}
+          dropdown={{
+            label: "Coming Features",
+            items: dropdownItems,
+          }}
           hasAccessToken={!!accessToken}
           userInfo={userInfo}
           dashboardRoute={dashboardRoute}
