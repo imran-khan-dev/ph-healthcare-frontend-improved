@@ -5,8 +5,6 @@ import { Input } from "@/components/ui/input";
 import { HeroProps } from "@/types/heroProps";
 import { LargeSparkleIcon, SparkleIcon } from "@/assets/icons/SparkleIcon";
 
-
-
 export function Hero({
   badge = {
     text: "AI-Powered Healthcare",
@@ -76,13 +74,13 @@ export function Hero({
         }}
       />
       {/* Content Container */}
-      <div className="w-full px-4 py-8 md:px-8 lg:px-16 relative">
-        <div className="mx-auto max-w-[1200px]">
+      <div className="w-full relative bg-blue-50">
+        <div className="container mx-auto px-4 py-16 md:px-8 lg:px-16">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
             {/* Left Column - Hero Content */}
             <div className="flex flex-col justify-center space-y-6">
               {/* Badge */}
-              <div className="inline-flex items-center gap-3 self-start rounded-full bg-white px-4 py-2">
+              <div className="inline-flex items-center gap-3 self-start rounded-full bg-white px-4 py-2 shadow-sm">
                 <SparkleIcon />
                 <span className="text-[11.9px] font-medium text-blue-700">
                   {badge.text}
@@ -96,7 +94,7 @@ export function Hero({
               </div>
 
               {/* Description */}
-              <div className="space-y-1 text-[17px] leading-7 text-gray-600">
+              <div className="space-y-1 text-[17px] leading-7 text-gray-700">
                 {description.map((line, index) => (
                   <p key={index}>{line}</p>
                 ))}
@@ -143,7 +141,7 @@ export function Hero({
 
             {/* Right Column - Form Card */}
             <div className="flex items-center justify-center lg:justify-end">
-              <div className="w-full max-w-[559.929px] rounded-2xl bg-white p-8 shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)]">
+              <div className="w-full max-w-[559.929px] rounded-2xl bg-white p-8 shadow-lg border border-gray-100">
                 {/* Card Header */}
                 <div className="mb-6 flex items-center justify-between">
                   <h2 className="text-[20.4px] leading-6">{formCard.title}</h2>

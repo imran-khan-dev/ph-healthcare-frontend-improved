@@ -23,7 +23,7 @@ const PublicNavbar = async () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur  dark:bg-background/95">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8 lg:px-16">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-xl font-bold text-primary">PH Doc</span>
         </Link>
