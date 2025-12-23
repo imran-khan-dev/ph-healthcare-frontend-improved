@@ -3,8 +3,33 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "About PH Doc | AI-Powered Healthcare Platform",
+  description: "Learn about PH Doc, an AI-driven healthcare platform connecting patients with expert doctors online for consultations, prescriptions, and seamless medical guidance.",
+  keywords: ["PH Doc", "AI Healthcare", "Online Doctor Consultation", "Telemedicine", "Medicine Delivery", "Diagnostics", "Medical NGO Directory"],
+  authors: [{ name: "PH Doc Team" }],
+  openGraph: {
+    title: "About PH Doc | AI-Powered Healthcare Platform",
+    description: "Learn about PH Doc, an AI-driven healthcare platform connecting patients with expert doctors online.",
+    type: "website",
+    url: "/about",
+    siteName: "PH Doc",
+    images: [
+      {
+        url: "/ph-health-care.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PH Doc AI Healthcare",
+      },
+    ],
+  },
+};
+
+
 export default function AboutPage() {
   const brandBlue = "#0071DF";
+
+  
 
   return (
     <div className="w-full bg-blue-50">
