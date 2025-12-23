@@ -5,14 +5,21 @@ import Link from "next/link";
 import AISearchDialog from "./AISSearchDialog";
 import MobileMenu from "./MobileMenu";
 import NavbarAuthButtons from "./NavbarAuthButtons";
+import Dropdown from "./DropDownProps";
 
 const PublicNavbar = async () => {
   const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/specialist", label: "Specialist" },
     { href: "/consultation", label: "Consultation" },
-    { href: "/health-plans", label: "Health Plans" },
-    { href: "/medicine", label: "Medicine" },
-    { href: "/diagnostics", label: "Diagnostics" },
-    { href: "/ngos", label: "NGOs" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/about", label: "About" },
+  ];
+
+  const dropdownItems = [
+    { label: "Medicine", href: "/medicine" },
+    { label: "Diagnostics", href: "/diagnostics" },
+    { label: "NGOs", href: "/ngos" },
   ];
 
   const accessToken = await getCookie("accessToken");
@@ -22,7 +29,7 @@ const PublicNavbar = async () => {
     : "/";
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur  dark:bg-background/95">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur dark:bg-background/95">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8 lg:px-16">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-xl font-bold text-primary">PH Doc</span>
@@ -33,12 +40,13 @@ const PublicNavbar = async () => {
             <Link
               key={link.label}
               href={link.href}
-              prefetch={true}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors cursor-pointer"
             >
               {link.label}
             </Link>
           ))}
+
+          <Dropdown items={dropdownItems} label="Coming Features" />
         </nav>
 
         <div className="hidden md:flex items-center space-x-2">
@@ -50,9 +58,8 @@ const PublicNavbar = async () => {
           />
         </div>
 
-        {/* Mobile Menu */}
         <MobileMenu
-          navItems={navItems}
+          navItems={[...navItems, ...dropdownItems]}
           hasAccessToken={!!accessToken}
           userInfo={userInfo}
           dashboardRoute={dashboardRoute}

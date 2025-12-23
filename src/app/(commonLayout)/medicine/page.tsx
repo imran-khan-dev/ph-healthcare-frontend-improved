@@ -54,7 +54,7 @@ const MedicinePage = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12">
       <div className="mb-12 text-center">
         <Badge className="mb-4" variant="outline">
           Coming Soon

@@ -30,7 +30,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section className="bg-card sm:py-12 md:py-24">
-      <div className="container mx-auto px-4 py-16 md:px-8 lg:px-16">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground">What Our Client Says</h2>
           <p className="text-muted-foreground mt-4">
