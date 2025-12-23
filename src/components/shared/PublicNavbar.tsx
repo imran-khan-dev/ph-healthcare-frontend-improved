@@ -12,7 +12,7 @@ const PublicNavbar = async () => {
     { href: "/", label: "Home" },
     { href: "/specialist", label: "Specialist" },
     { href: "/consultation", label: "Consultation" },
-    { href: "/faq", label: "FAQ" },
+    { href: "/doctors", label: "Doctors" },
     { href: "/about", label: "About" },
   ];
 

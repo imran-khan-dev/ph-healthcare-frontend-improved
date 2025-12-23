@@ -1,14 +1,35 @@
 import Link from 'next/link';
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 function PublicFooter() {
   return (
     <footer className="border-t bg-background">
       <div className="container mx-auto px-4 py-16 md:px-8 lg:px-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* About */}
           <div>
             <h3 className="font-bold mb-2">PH Doc</h3>
-            <p className="text-sm text-muted-foreground">Your health is our priority. We are here to provide the best medical services.</p>
+            <p className="text-sm text-muted-foreground">
+              Your health is our priority. We are here to provide the best medical services.
+            </p>
+            {/* Social Links */}
+            <div className="mt-4 flex space-x-4">
+              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Facebook className="size-5" />
+              </Link>
+              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Twitter className="size-5" />
+              </Link>
+              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Linkedin className="size-5" />
+              </Link>
+              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Instagram className="size-5" />
+              </Link>
+            </div>
           </div>
+
+          {/* Quick Links */}
           <div>
             <h3 className="font-semibold mb-2">Quick Links</h3>
             <ul className="space-y-2 text-sm">
@@ -17,14 +38,17 @@ function PublicFooter() {
               <li><Link href="/contact" className="text-muted-foreground hover:text-foreground">Contact</Link></li>
             </ul>
           </div>
+
+          {/* Support */}
           <div>
             <h3 className="font-semibold mb-2">Support</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/faq" className="text-muted-foreground hover:text-foreground">FAQ</Link></li>
               <li><Link href="/terms" className="text-muted-foreground hover:text-foreground">Terms of Service</Link></li>
               <li><Link href="/privacy" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
             </ul>
           </div>
+
+          {/* Contact */}
           <div>
             <h3 className="font-semibold mb-2">Contact Us</h3>
             <p className="text-sm text-muted-foreground">
@@ -34,6 +58,8 @@ function PublicFooter() {
             </p>
           </div>
         </div>
+
+        {/* Footer Bottom */}
         <div className="mt-8 border-t pt-4 text-center text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} PH Doc. All Rights Reserved.
         </div>
@@ -41,4 +67,5 @@ function PublicFooter() {
     </footer>
   );
 }
+
 export default PublicFooter;
