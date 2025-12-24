@@ -1,3 +1,7 @@
+import AboutUs from "@/components/modules/Home/About";
+import ComingFeatures from "@/components/modules/Home/ComingFeatures";
+import CTABanner from "@/components/modules/Home/CTA";
+import FAQS from "@/components/modules/Home/FAQ";
 import { Hero } from "@/components/modules/Home/Hero";
 import Specialities from "@/components/modules/Home/Specialties";
 import Steps from "@/components/modules/Home/Steps";
@@ -21,12 +25,10 @@ export default function Home() {
         <Specialities />
         <TopRatedDoctors />
         <Steps />
-        <section>
-          <h2>Coming Features</h2>
-        </section>
-        <section>CTA banner</section>
-        <section>FAQ</section>
-        <section>About</section>
+        <ComingFeatures/>
+        <AboutUs/>
+        <FAQS/>
+        <CTABanner/>
       </main>
     </>
   );

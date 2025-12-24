@@ -12,8 +12,8 @@ const PublicNavbar = async () => {
     { href: "/", label: "Home" },
     { href: "/specialist", label: "Specialist" },
     { href: "/consultation", label: "Consultation" },
-    { href: "/doctors", label: "Doctors" },
     { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const dropdownItems = [
