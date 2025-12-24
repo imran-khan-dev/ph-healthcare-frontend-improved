@@ -17,16 +17,16 @@ import Link from "next/link";
 import { useState } from "react";
 import BookAppointmentDialog from "./BookAppointmentDialog";
 
-interface DoctorCard {
+interface DoctorCardProps {
   doctor: IDoctor;
 }
 
-export default function DoctorCard({ doctor }: DoctorCard) {
+export default function DoctorCard({ doctor }: DoctorCardProps) {
   const [showScheduleModal, setShowScheduleModal] = useState(false);
 
   return (
     <>
-      <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+      <Card className="flex flex-col h-full overflow-hidden hover:shadow-lg transition-shadow">
         <CardHeader className="pb-3">
           <div className="flex items-start gap-4">
             <Avatar className="h-16 w-16">
@@ -62,7 +62,8 @@ export default function DoctorCard({ doctor }: DoctorCard) {
           </div>
         </CardHeader>
 
-        <CardContent className="space-y-3 pb-3">
+        {/* Make content grow to push footer down */}
+        <CardContent className="flex-1 flex flex-col justify-between space-y-3 pb-3">
           <div className="grid grid-cols-2 gap-3 text-sm">
             <div className="flex items-center gap-2 text-muted-foreground">
               <Clock className="h-4 w-4 shrink-0" />
@@ -110,7 +111,8 @@ export default function DoctorCard({ doctor }: DoctorCard) {
           )}
         </CardContent>
 
-        <CardFooter className="pt-3 border-t flex gap-2">
+        {/* Footer always at bottom */}
+        <CardFooter className="pt-3 border-t flex gap-2 mt-auto">
           <Link className="flex-1" href={`/consultation/doctor/${doctor.id}`}>
             <Button variant="outline" className="w-full">
               <Eye className="h-4 w-4 mr-2" />
