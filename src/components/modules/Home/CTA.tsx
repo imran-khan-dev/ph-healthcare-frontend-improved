@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTABanner() {
   return (
-    <section className="bg-[#0071DF] py-20">
+    <section className="bg-[#0071DF] py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

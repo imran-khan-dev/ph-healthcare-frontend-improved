@@ -58,7 +58,7 @@ const comingFeatures = [
 
 export default function ComingFeatures() {
   return (
-    <section className="bg-[#0071DF]/10 py-24">
+    <section className="bg-[#0071DF]/10 py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

@@ -31,7 +31,7 @@ const specialists = [
 
 const Specialities = () => {
   return (
-    <section className="w-full py-16 md:py-24">
+    <section className="w-full py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         {/* Centered Heading + View All Link */}
         <div className="text-center mb-12">

@@ -43,7 +43,7 @@ const StepCard = ({ icon: Icon, title, description, index }: { icon: React.Eleme
 
 const Steps = () => {
   return (
-    <section className="w-full sm:py-12 md:py-24">
+    <section className="w-full py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground">Easy Steps to Get Your Solution</h2>
