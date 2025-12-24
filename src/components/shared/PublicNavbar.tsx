@@ -2,6 +2,7 @@ import { getDefaultDashboardRoute } from "@/lib/auth-utils";
 import { getUserInfo } from "@/services/auth/getUserInfo";
 import { getCookie } from "@/services/auth/tokenHandlers";
 import Link from "next/link";
+import Image from "next/image";
 import AISearchDialog from "./AISSearchDialog";
 import MobileMenu from "./MobileMenu";
 import NavbarAuthButtons from "./NavbarAuthButtons";
@@ -32,7 +33,8 @@ const PublicNavbar = async () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur dark:bg-background/95">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8 lg:px-16">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold text-primary">PH Doc</span>
+        <Image src="/ph-log.png" alt="PH Doc" width={150} height={150} />
+          {/* <span className="text-xl font-bold text-primary">PH Doc</span> */}
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">

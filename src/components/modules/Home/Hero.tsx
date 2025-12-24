@@ -21,7 +21,7 @@ export function Hero() {
     <div className="relative w-full py-12 md:py-24 flex items-center justify-center bg-gradient-to-b from-blue-50 to-blue-100 px-4 md:px-8 lg:px-16">
       <div className="max-w-3xl text-center space-y-8">
         {/* Badge */}
-        <div className="inline-flex items-center gap-3 rounded-full bg-white/30 px-4 py-2 backdrop-blur mx-auto">
+        <div className="inline-flex items-center gap-3 rounded-full bg-white/30 px-4 py-2 border border-blue-500 backdrop-blur mx-auto">
           <div className="text-blue-500 animate-pulse">
             <SparkleIcon />
           </div>
