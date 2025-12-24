@@ -4,25 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "About PH Doc | AI-Powered Healthcare Platform",
+  title: "About PH Doc - AI-Powered Healthcare Platform",
   description: "Learn about PH Doc, an AI-driven healthcare platform connecting patients with expert doctors online for consultations, prescriptions, and seamless medical guidance.",
-  keywords: ["PH Doc", "AI Healthcare", "Online Doctor Consultation", "Telemedicine", "Medicine Delivery", "Diagnostics", "Medical NGO Directory"],
-  authors: [{ name: "PH Doc Team" }],
-  openGraph: {
-    title: "About PH Doc | AI-Powered Healthcare Platform",
-    description: "Learn about PH Doc, an AI-driven healthcare platform connecting patients with expert doctors online.",
-    type: "website",
-    url: "/about",
-    siteName: "PH Doc",
-    images: [
-      {
-        url: "/ph-health-care.jpg",
-        width: 1200,
-        height: 630,
-        alt: "PH Doc AI Healthcare",
-      },
-    ],
-  },
 };
 
 
@@ -37,10 +20,10 @@ export default function AboutPage() {
       <section className="container mx-auto px-4 py-24 md:px-8 lg:px-16 flex flex-col-reverse lg:flex-row items-center gap-12">
         {/* Text Content */}
         <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-[48px] font-bold text-slate-900 mb-6">
+          <h1 className="text-4xl font-bold text-primary mb-4">
             About PH Doc
           </h1>
-          <p className="max-w-3xl text-[18px] text-slate-700 leading-8 mb-4">
+          <p className="text-lg text-muted-foreground max-w-2xl leading-8">
             PH Doc is an AI-driven healthcare platform designed to make healthcare accessible, reliable, and efficient. 
             We connect patients with expert doctors online, enabling easy consultations and seamless access to medical guidance.
           </p>

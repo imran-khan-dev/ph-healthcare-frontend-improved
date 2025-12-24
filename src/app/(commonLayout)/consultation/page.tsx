@@ -6,7 +6,13 @@ import { TableSkeleton } from "@/components/shared/TableSkeleton";
 import { queryStringFormatter } from "@/lib/formatters";
 import { getDoctors } from "@/services/admin/doctorManagement";
 import { getSpecialities } from "@/services/admin/specialitiesManagement";
+import { Metadata } from "next";
 import { Suspense } from "react";
+
+export const metadata: Metadata = {
+  title: "Consultation - PH Doc",
+  description: "Find your doctor with the help of AI.",
+};
 
 // ISR: Revalidate every 10 minutes for doctor listings
 export const revalidate = 600;
@@ -29,7 +35,9 @@ const ConsultationPage = async ({
   const specialties = specialtiesResponse?.data || [];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+        <div className="w-full bg-blue-50">
+
+    <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12">
       <div className="space-y-6">
         {/* Header */}
         <div>
@@ -57,6 +65,7 @@ const ConsultationPage = async ({
           totalPages={doctorsResponse?.meta?.totalPage || 1}
         />
       </div>
+    </div>
     </div>
   );
 };

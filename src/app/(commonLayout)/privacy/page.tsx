@@ -20,13 +20,13 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="w-full bg-[#0071DF]/10">
+    <div className="w-full bg-blue-50">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 md:px-8 lg:px-16 text-center">
-        <h1 className="text-[48px] font-bold text-slate-900 mb-6">
+        <h1 className="text-4xl font-bold text-primary mb-4">
           Privacy Policy
         </h1>
-        <p className="max-w-3xl mx-auto text-[18px] text-slate-700 leading-8">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-8">
           Your privacy is our priority at PH Doc. This page explains how we
           collect, use, and safeguard your personal information while providing
           AI-powered healthcare services.
@@ -94,28 +94,28 @@ export default function PrivacyPolicyPage() {
             <Link
               href="https://facebook.com"
               target="_blank"
-              className="hover:text-[#005BB5] flex items-center gap-2 justify-center"
+              className="flex items-center gap-2 justify-center"
             >
               <Facebook size={20} /> Facebook
             </Link>
             <Link
               href="https://twitter.com"
               target="_blank"
-              className="hover:text-[#005BB5] flex items-center gap-2 justify-center"
+              className="flex items-center gap-2 justify-center"
             >
               <Twitter size={20} /> Twitter
             </Link>
             <Link
               href="https://instagram.com"
               target="_blank"
-              className="hover:text-[#005BB5] flex items-center gap-2 justify-center"
+              className="flex items-center gap-2 justify-center"
             >
               <Instagram size={20} /> Instagram
             </Link>
             <Link
               href="https://linkedin.com"
               target="_blank"
-              className="hover:text-[#005BB5] flex items-center gap-2 justify-center"
+              className="flex items-center gap-2 justify-center"
             >
               <Linkedin size={20} /> LinkedIn
             </Link>

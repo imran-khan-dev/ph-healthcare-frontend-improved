@@ -8,7 +8,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CheckCircle, Shield, Users, Zap } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Health Plans Services - PH Doc",
+  description: "Health Plans Services is upcoming feature of PH Doc.",
+};
+
 
 export const dynamic = "force-static";
 

@@ -10,7 +10,7 @@ interface Speciality {
 }
 
 export const metadata: Metadata = {
-  title: "Medical Specialists | PH Doc",
+  title: "Medical Specialists - PH Doc",
   description:
     "Explore a complete list of medical specialists on PH Doc. Find the right doctor for your symptoms using our AI-powered healthcare platform.",
 };
@@ -23,7 +23,7 @@ export default async function SpecialistsPage() {
     <div className="w-full bg-[#0071DF]/10">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 md:px-8 lg:px-16 text-center">
-        <h1 className="text-[48px] font-bold text-slate-900 mb-6">
+        <h1 className="text-4xl font-bold text-primary mb-4">
           Medical Specialists
         </h1>
         <p className="max-w-3xl mx-auto text-[18px] text-slate-700 leading-8">

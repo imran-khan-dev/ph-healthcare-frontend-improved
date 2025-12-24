@@ -15,7 +15,13 @@ import {
   Heart,
   Microscope,
 } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Diagnostic Services - PH Doc",
+  description: "Diagonostic Services is upcoming feature of PH Doc.",
+};
 
 export const dynamic = "force-static";
 
@@ -60,6 +66,8 @@ const DiagnosticsPage = () => {
   ];
 
   return (
+        <div className="w-full bg-blue-50">
+
     <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12">
       <div className="mb-12 text-center">
         <Badge className="mb-4" variant="outline">
@@ -165,6 +173,7 @@ const DiagnosticsPage = () => {
         </Card>
       </div>
     </div>
+        </div>
   );
 };
 

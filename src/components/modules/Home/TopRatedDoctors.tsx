@@ -6,12 +6,12 @@ import { getDoctors } from "@/services/admin/doctorManagement";
 import { IDoctor } from "@/types/doctor.interface";
 import Link from "next/link";
 
-export const revalidate = 10; // ISR: revalidate every 10 minutes
+export const revalidate = 1000; // ISR: revalidate every 10 minutes
 
 const TopRatedDoctors = async () => {
   // Fetch top 4 doctors
-  const doctorsResponse = await getDoctors("?limit=4&sort=-rating"); // adjust query if needed
-  const doctors = doctorsResponse?.data || [];
+  const doctorsResponse = await getDoctors("?limit=3&sort=-rating");
+  const doctors = (doctorsResponse?.data || []).slice(0, 3);
 
   return (
     <section className="bg-blue-50/50 py-12 md:py-24">
@@ -19,7 +19,7 @@ const TopRatedDoctors = async () => {
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground">
-            Our Top Rated Doctors
+            Our Top Doctors
           </h2>
           <p className="text-muted-foreground mt-4">
             Access to medical experts from various specialities, ready to
@@ -28,8 +28,8 @@ const TopRatedDoctors = async () => {
         </div>
 
         {/* Doctor Grid */}
-        <Suspense fallback={<TableSkeleton columns={4} />}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <Suspense fallback={<TableSkeleton columns={3} />}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {doctors.map((doctor: IDoctor) => (
               <DoctorCard key={doctor.id} doctor={doctor} />
             ))}
